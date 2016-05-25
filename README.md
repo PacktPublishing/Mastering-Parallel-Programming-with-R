@@ -5,7 +5,7 @@ You can read more at [Mastering Parallel Programming with R]
 (https://www.packtpub.com/big-data-and-business-intelligence/mastering-parallel-programming-r?utm_source=Github&utm_medium=Repository&utm_campaign=9781784394004)
 
 # Instructions
-#
+
  Copyright 2016 Simon Chapple
 
 Packt: "Mastering Parallelism with R"
