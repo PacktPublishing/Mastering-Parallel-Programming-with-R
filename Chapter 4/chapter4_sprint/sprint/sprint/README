@@ -1,0 +1,111 @@
+                       SPRINT: Simple Parallel INTerface
+
+SPRINT (Simple Parallel R INTerface) is a parallel framework for R. It 
+provides a High Performance Computing (HPC) harness which allows R scripts to 
+run on HPC clusters. SPRINT contains a library of selected R functions that 
+have been parallelized. Functions are named after the original R function with
+the added prefix 'p', i.e. the parallel version of cor() in SPRINT is called 
+pcor(). Calls to the parallel R functions are included directly in standard R 
+scripts.                      
+                                
+                                 REQUIREMENTS
+ 
+Multi-core or HPC platform running:
+
+*   R - latest version, SPRINT was tested using 2.15.1, 2.14.0, 2.12.1, 2.10.1, 2.10.0
+        and 2.9.2.
+*   MPI2 - any version will full MPI-2 support will work, although there are 
+           complications when using non-gcc compilers. MPICH2 is preferred.            
+*   Unix/Linux - SPRINT is designed for HPC systems and these all run on 
+    Unix/Linux.
+*   Mac OSX may be used instead of Unix/Linux. XCode command line tools 
+	must be installed to provide C and Fortran compilers.
+ 
+    
+The ff package is also needed when using the pcor() function or when using 
+SPRINT functions on ff objects, for example papply() accepts ff objects as 
+input parameter. SPRINT was tested using ff version 2.1-1. ff is available 
+from CRAN  (http://cran.r-project.org/web/packages/ff/index.html).
+
+There are known issues with open MPI parallel file IO support. SPRINT pcor() 
+function uses MPI-IO and tests carried on an installation with open MPI 1.3.2 
+on IBM General Parallel File System (GPFS) have shown inconsistent results. 
+Sometimes wrong results were written out to file by one or more processes when
+using pcor() on more than one node. The SPRINT team therefore strongly 
+recommends NOT using open MPI 1.3.2.  
+
+User access to HPC platforms will vary from service to service. The 
+installation of software is likely to be limited to system administrators. 
+Therefore help from your system administrator may be required to ensure that 
+the required environment is set up on your HPC system. Running jobs is often 
+only allowed through a batch queue system rather interactively. In such case, 
+R scripts using SPRINT will need to be submitted to the batch queue using the 
+appropriate utility specific to your HPC system (i.e. mpiexec, qsub). 
+   
+                                 INSTALLATION
+
+SPRINT depends on several packages which must be installed first as follows:
+> R
+install.packages('rlecuyer')
+install.packages('boot')
+install.packages('e1071')
+source("http://bioconductor.org/biocLite.R")
+biocLite("ShortRead")
+
+SPRINT is distributed as a single compressed tar file. All source files are 
+included in one single directory called 'sprint'. The installation process is 
+carried out with a single command line from the directory containing SPRINT:
+
+    > R CMD INSTALL sprint
+ 
+If you are using a central installation of R and do not have the root 
+privileges to install libraries there, you can install the sprint library 
+locally by setting $R_LIBS accordingly.
+
+   > R CMD INSTALL -l $R_LIBS sprint 
+   
+R tests if the installed package can be loaded during the installation. SPRINT
+requires MPI to run and if you try to install it without MPI then the 
+installation will fail. If you are installing the SPRINT library on a cluster 
+where MPI is only installed on the back-end nodes but not on the front-end 
+nodes then you may need to use the "--no-test-load" flag during the 
+installation process. 
+
+   > R CMD INSTALL --no-test-load sprint
+
+optional arguments to the installation command: 
+
+    --configure-args="--with-wrapper-script=$WRAPPER_SCRIPT"
+where:
+
+$WRAPPER_SCRIPT contains the compiler to be used for building SPRINT, e.g.  
+"mpicc". The configure script automatically identifies the appropriate 
+compiler for building SPRINT. This option should only be used if the script 
+fails to locate the MPI compiler.
+                                 
+The SPRINT library includes a function to test the installation called 
+ptest(). It simply prints a message identifying each processor in the compute 
+cluster. For example, when using SPRINT with 5 processors and you will get the
+following output:   
+    
+    [1] "HELLO, FROM PROCESSOR: 0" "HELLO, FROM PROCESSOR: 2"        
+    [3] "HELLO, FROM PROCESSOR: 1" "HELLO, FROM PROCESSOR: 3"
+    [5] "HELLO, FROM PROCESSOR: 4" 
+
+This is obtained by running the following sample R script, install_test.R:
+    
+    library("sprint")   
+    ptest() 
+    pterminate()
+    quit()
+
+    > mpiexec -n 5 R -f install_test.R
+                                
+==============================================================================
+SPRINT Team
+ 
+email: sprint@ed.ac.uk
+http://www.r-sprint.org
+
+Copyright © 2014 The University of Edinburgh.
+==============================================================================                     

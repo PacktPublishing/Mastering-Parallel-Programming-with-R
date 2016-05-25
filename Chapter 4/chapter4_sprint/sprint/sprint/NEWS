@@ -1,0 +1,103 @@
+VERSION sprint 1.0.6
+
+	o This version of SPRINT now works with R 3.0.x.
+	
+	o Fixed an installation warning that caused the message "warning: argument type 'enum commandCodes *' 
+	doesn't match specified 'MPI' type tag that requires 'int *'    [-Wtype-safety]".
+	
+	o Fixed an intermittent bug in pcor that caused the following warning: "Error in ff(dim = 
+	 c(number_of_samples, number_of_samples), dimnames = dimnames_,  :   length exceeds file length".
+	 
+	o The randomForest library is loaded by default when SPRINT is loaded.
+	
+	o The Makefile was changed to remove gmake and gcc dependencies.
+	
+	
+VERSION sprint 1.0.5
+
+	o Added pstringdistmatrix(), a function which calculates the hamming distance between strings.
+	
+	o SPRINT can now be installed with the latest version of mpich which is MPI 3 compliant. 
+	
+	o The ppam() and pcor() functions now keep the dimnames of the data.
+	
+	o The dependencies have been updated, so now the call 'install.packages("sprint", dependencies = T)' should work.
+	
+	o The papply() documentation has been updated to show that it does not currently support ff data types.
+	
+	o A bug that caused the install error 'C++ MPI compiler not detected' was fixed
+	
+	
+VERSION sprint 1.0.4
+
+	o Added support for Mac OSX and fixed a bug in ppam.
+
+VERSION sprint 1.0.2
+
+    o Fixed the issue with filling the $clusinfo[] and $silinfo$avg.width values in ppam
+    o The "bug in C cstat(): ntt=0 !!!" no longer appear in ppam
+    o psvm(), a svm function
+
+VERSION sprint 1.0.1
+
+    o Fixed the issue with worker processes finalization.
+
+VERSION sprint 1.0.0
+
+    o First 'full' release of SPRINT.
+    
+    o Added papply(), a parallel 'apply' function.
+    
+    o Added pboot(), a parallel bootstrapping function.
+    
+    o Added prandomForest(), an ensemble tree classifier.
+    
+    o Added pRP(), a parallel rank product function.
+
+VERSION sprint beta 0.3.0
+
+    o Added ppam(), a parallel clustering function performing a partition
+    around medoid.
+    
+    o Added functionality to pcor(), to allow the correlation between two 
+    matrices.
+
+VERSION sprint beta 0.2.0
+
+    o Simplified installation process and reduced set of requirements.
+    
+    o Added pmaxt(), a parallel permutation test function.
+    
+    o Added functionality to pcor() to allow the output of the distance matrix 
+    instead of the correlation coefficient matrix.
+
+VERSION sprint beta 0.1.0
+
+    o Improved scalability.
+    
+    o Added ability to process data sets larger than the memory of the 
+    computer.
+    
+    o pcor() interface changed to allow the use of ff objects as input.
+    
+    o pcor() now returns a binary file as output instead of a text file. 
+
+VERSION sprint prototype 0.0.3 
+    
+    o Introduction of the SPRINT library of parallel R functions.
+    
+    o Added ptest(), a function that check the library is installed and 
+    operating properly.
+    
+    o Added pcor(), a parallel version of the Pearson correlation. pcor() 
+    takes a 2D array as input and correlates each row with every other row.
+    
+==============================================================================
+SPRINT Team
+
+email: sprint@ed.ac.uk
+http://www.r-sprint.org
+
+Copyright © 2012 The University of Edinburgh.
+==============================================================================
+   

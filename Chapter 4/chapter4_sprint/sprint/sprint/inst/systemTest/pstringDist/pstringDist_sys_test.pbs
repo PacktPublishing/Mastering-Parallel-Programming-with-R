@@ -1,0 +1,28 @@
+#!/bin/bash -login
+# ! Edit the job name to identify separate job
+#PBS -N psDist11000
+# ! Edit number of cores to fit your job
+#PBS -l mppwidth=8
+#PBS -l mppnppn=4
+# ! Edit time to fit your job
+#PBS -l walltime=00:30:00
+# Replace with your own budget
+#PBS -A b10     
+  
+# Load R & SPRINT library
+module load R
+
+# Change to the directory that the job was submitted from
+cd $PBS_O_WORKDIR
+
+# Replace $TMP with your own temporary directory.
+export TMP=~/work/tmp
+
+# ! Edit the script name to point to the script to be run
+SCRIPT_NAME=pstringDist_sys_test.R
+ROWS=11000
+COLUMNS=100
+FILENAME=pcor11000.out
+
+# Launch the parallel job
+aprun -n 8 -N 4 R --slave -f $SCRIPT_NAME --args $ROWS $COLUMNS $FILENAME

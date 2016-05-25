@@ -1,0 +1,482 @@
+[1] "../unitTests/papply"            "../unitTests/pboot"            
+[3] "../unitTests/pcor"              "../unitTests/pmaxT"            
+[5] "../unitTests/ppam"              "../unitTests/pstringdistmatrix"
+[7] "../unitTests/ptest"            
+Loading required package: rlecuyer
+Loading required package: randomForest
+randomForest 4.6-7
+Type rfNews() to see new features/changes/bug fixes.
+
+Attaching package: ‘randomForest’
+
+The following object is masked from ‘package:Biobase’:
+
+    combine
+
+The following object is masked from ‘package:BiocGenerics’:
+
+    combine
+
+SPRINT 1.0.7 loaded
+
+Welcome to SPRINT
+ Please help us fund SPRINT by filling in 
+ the form at http://www.r-sprint.org/ 
+ or emailing us at sprint@ed.ac.uk and letting 
+ us know whether you use SPRINT for commercial 
+ or academic use.
+[1] "*** System info ***"
+R version 3.1.1 (2014-07-10)
+Platform: x86_64-apple-darwin13.1.0 (64-bit)
+
+locale:
+[1] en_GB.UTF-8/en_GB.UTF-8/en_GB.UTF-8/C/en_GB.UTF-8/en_GB.UTF-8
+
+attached base packages:
+[1] parallel  stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+ [1] sprint_1.0.7            randomForest_4.6-7      rlecuyer_0.3-3         
+ [4] stringdist_0.7.3        multtest_2.20.0         e1071_1.6-3            
+ [7] ShortRead_1.22.0        GenomicAlignments_1.0.2 BSgenome_1.32.0        
+[10] Rsamtools_1.16.1        GenomicRanges_1.16.3    GenomeInfoDb_1.0.2     
+[13] Biostrings_2.32.1       XVector_0.4.0           IRanges_1.22.9         
+[16] BiocParallel_0.6.1      boot_1.3-11             golubEsets_1.6.0       
+[19] Biobase_2.24.0          BiocGenerics_0.10.0     cluster_1.15.2         
+[22] ff_2.2-13               bit_1.1-12              RUnit_0.4.26           
+
+loaded via a namespace (and not attached):
+ [1] BatchJobs_1.3       BBmisc_1.7          bitops_1.0-6       
+ [4] brew_1.0-6          checkmate_1.1       class_7.3-10       
+ [7] codetools_0.2-8     DBI_0.2-7           digest_0.6.4       
+[10] fail_1.2            foreach_1.4.2       grid_3.1.1         
+[13] hwriter_1.3         iterators_1.0.7     lattice_0.20-29    
+[16] latticeExtra_0.6-26 MASS_7.3-33         RColorBrewer_1.0-5 
+[19] Rcpp_0.11.2         RSQLite_0.11.4      sendmailR_1.1-2    
+[22] splines_3.1.1       stats4_3.1.1        stringr_0.6.2      
+[25] survival_2.37-7     tools_3.1.1         zlibbioc_1.10.0    
+               _                           
+platform       x86_64-apple-darwin13.1.0   
+arch           x86_64                      
+os             darwin13.1.0                
+system         x86_64, darwin13.1.0        
+status                                     
+major          3                           
+minor          1.1                         
+year           2014                        
+month          07                          
+day            10                          
+svn rev        66115                       
+language       R                           
+version.string R version 3.1.1 (2014-07-10)
+nickname       Sock it to Me               
+                                                                                            sysname 
+                                                                                           "Darwin" 
+                                                                                            release 
+                                                                                           "13.3.0" 
+                                                                                            version 
+"Darwin Kernel Version 13.3.0: Tue Jun  3 21:27:35 PDT 2014; root:xnu-2422.110.17~1/RELEASE_X86_64" 
+                                                                                           nodename 
+                                                                             "mbp-et.epcc.ed.ac.uk" 
+                                                                                            machine 
+                                                                                           "x86_64" 
+                                                                                              login 
+                                                                                      "eilidhtroup" 
+                                                                                               user 
+                                                                                      "eilidhtroup" 
+                                                                                     effective_user 
+                                                                                      "eilidhtroup" 
+[1] "*** End of system info ***"
+
+
+Executing test function test.compare_results_ff_matrix_columns  ... Timing stopped at: 0 0 0.001 
+Error in DEACTIVATED() : 
+ done successfully.
+
+
+
+Executing test function test.compare_results_ff_matrix_rows  ... Timing stopped at: 0 0 0 
+Error in DEACTIVATED() : 
+ done successfully.
+
+
+
+Executing test function test.compare_results_ff_matrix_rows_sin  ... Timing stopped at: 0 0 0.001 
+Error in DEACTIVATED() : 
+ done successfully.
+
+
+
+Executing test function test.compare_results_function_definition_line  ...  done successfully.
+
+
+
+Executing test function test.compare_results_function_definition_multiline  ...  done successfully.
+
+
+
+Executing test function test.compare_results_integers  ... Error in papply(integers, mean) : 
+  papply only supports a matrix or a list of matrices as input.
+ done successfully.
+
+
+
+Executing test function test.compare_results_list  ...  done successfully.
+
+
+
+Executing test function test.compare_results_logic_list  ... Error in papply(logic_list, mean) : 
+  papply only supports a matrix or a list of matrices as input.
+ done successfully.
+
+
+
+Executing test function test.compare_results_matrix_columns  ...  done successfully.
+
+
+
+Executing test function test.compare_results_matrix_columns_sin  ...  done successfully.
+
+
+
+Executing test function test.compare_results_matrix_rows  ...  done successfully.
+
+
+
+Executing test function test.compare_results_matrix_rows_sin  ...  done successfully.
+
+
+
+Executing test function test.compare_results_simple_list  ... Error in papply(simple_list, mean) : 
+  papply only supports a matrix or a list of matrices as input.
+ done successfully.
+
+
+
+Executing test function test.error_message_for_ffobject  ... Error in papply(ffobjectt, mean) : 
+  papply only supports a matrix or a list of matrices as input.
+ done successfully.
+
+
+
+Executing test function test.bootExample1  ...  done successfully.
+
+
+
+Executing test function test.bootTrim  ...  done successfully.
+
+
+
+Executing test function test.grav1  ...  done successfully.
+
+
+
+Executing test function test.ddd  ...  done successfully.
+
+
+
+Executing test function test.ddddataframe  ...  done successfully.
+
+
+
+Executing test function test.dotdotdot  ...  done successfully.
+
+
+
+Executing test function test.nuke  ...  done successfully.
+
+
+
+Executing test function test.mn  ...  done successfully.
+
+
+
+Executing test function test.stypefm3  ...  done successfully.
+
+
+
+Executing test function test.simple  ...  done successfully.
+
+
+
+Executing test function test.standard  ...  done successfully.
+
+
+
+Executing test function test.standard_df  ...  done successfully.
+
+
+
+Executing test function test.standard_label  ...  done successfully.
+
+
+
+Executing test function test.standard_sample  ...  done successfully.
+
+
+
+Executing test function test.tn  ...  done successfully.
+
+
+
+Executing test function test.standard  ...  done successfully.
+
+
+
+Executing test function test.stypew  ...  done successfully.
+
+
+
+Executing test function test.stypewm  ...  done successfully.
+
+
+
+Executing test function test.correct_row_names_2_matrices  ...  done successfully.
+
+
+
+Executing test function test.correct_args  ...  done successfully.
+
+
+
+Executing test function test.correct_row_names  ...  done successfully.
+
+
+
+Executing test function test.correct_row_names_2_matrices  ...  done successfully.
+
+
+
+Executing test function test.correct_args  ...  done successfully.
+
+
+
+Executing test function test.small_test  ... b=100	b=200	b=300	b=400	b=500	b=600	b=700	b=800	b=900	b=1000	
+b=1100	b=1200	b=1300	b=1400	b=1500	b=1600	b=1700	b=1800	b=1900	b=2000	
+b=2100	b=2200	b=2300	b=2400	b=2500	b=2600	b=2700	b=2800	b=2900	b=3000	
+b=3100	b=3200	b=3300	b=3400	b=3500	b=3600	b=3700	b=3800	b=3900	b=4000	
+b=4100	b=4200	b=4300	b=4400	b=4500	b=4600	b=4700	b=4800	b=4900	b=5000	
+b=5100	b=5200	b=5300	b=5400	b=5500	b=5600	b=5700	b=5800	b=5900	b=6000	
+b=6100	b=6200	b=6300	b=6400	b=6500	b=6600	b=6700	b=6800	b=6900	b=7000	
+b=7100	b=7200	b=7300	b=7400	b=7500	b=7600	b=7700	b=7800	b=7900	b=8000	
+b=8100	b=8200	b=8300	b=8400	b=8500	b=8600	b=8700	b=8800	b=8900	b=9000	
+b=9100	b=9200	b=9300	b=9400	b=9500	b=9600	b=9700	b=9800	b=9900	b=10000	
+ done successfully.
+
+
+
+Executing test function test.check_B_comp  ...  done successfully.
+
+
+
+Executing test function test.wrong_args  ...  done successfully.
+
+
+
+Executing test function test.ff.matrix  ...  done successfully.
+
+
+
+Executing test function test.distance.matrix  ...  done successfully.
+
+
+
+Executing test function test.symmetric.matrix  ...  done successfully.
+
+
+
+Executing test function test.correct_ff_mediod_names  ...  done successfully.
+
+
+
+Executing test function test.distance_correct_mediod_names  ...  done successfully.
+
+
+
+Executing test function test.symmetric_correct_mediod_names  ...  done successfully.
+
+
+
+Executing test function test.pcor_and_ppam  ...  done successfully.
+
+
+
+Executing test function test.AllInputs  ...  done successfully.
+
+
+
+Executing test function test.differentInputs  ... Error in pstringdistmatrix(strings, other.strings, method = "h") : 
+  pstringdistmatrix only works when both input sets of strings are the same.
+ done successfully.
+
+
+
+Executing test function test.ErrorIfNCores  ... Error in pstringdistmatrix(a = strings, b = strings, method = "h", ncores = 4) : 
+  ncores is not used by pstringdistmatrix. Please refer to the SPRINT user guide for how to run in parallel.
+ done successfully.
+
+
+
+Executing test function test.maxDistError  ... Error in pstringdistmatrix(strings, strings, method = "h", maxDist = 1) : 
+  maxDist is not used by pstringdistmatrix. Please set maxDist=0, or remove the maxDist parameter.
+ done successfully.
+
+
+
+Executing test function test.stringDistAllArgs  ...  done successfully.
+
+
+
+Executing test function test.stringDistDataArgOnly  ...  done successfully.
+
+
+
+Executing test function test.stringDistPhageWithNames  ...  done successfully.
+
+
+
+Executing test function test.stringDistPhi  ...  done successfully.
+
+
+
+Executing test function test.wrongMethodArg  ... Error in pstringdistmatrix(a = strings, b = strings, method = "lv") : 
+  pstringdistmatrix only supports the hamming method. Please choose method="h".
+ done successfully.
+
+
+
+Executing test function test.mpiIsWorkingOnSeveralProcesses  ... [1] "HELLO, FROM PROCESSOR: 0" "HELLO, FROM PROCESSOR: 2"
+[3] "HELLO, FROM PROCESSOR: 3" "HELLO, FROM PROCESSOR: 1"
+ done successfully.
+
+RUNIT TEST PROTOCOL -- Wed Sep  3 15:41:55 2014 
+*********************************************** 
+Number of test functions: 54 
+Number of deactivated test functions: 3 
+Number of errors: 0 
+Number of failures: 0 
+
+ 
+1 Test Suite : 
+allUnitTests - 54 test functions, 0 errors, 0 failures
+
+
+
+Details 
+*************************** 
+Test Suite: allUnitTests 
+Test function regexp: ^test.+ 
+Test file regexp: *.R 
+Involved directories: 
+../unitTests/papply 
+../unitTests/pboot 
+../unitTests/pcor 
+../unitTests/pmaxT 
+../unitTests/ppam 
+../unitTests/pstringdistmatrix 
+../unitTests/ptest 
+--------------------------- 
+Test file: ../unitTests/papply/runit_test.R 
+test.compare_results_ff_matrix_columns : DEACTIVATED, 
+test.compare_results_ff_matrix_rows : DEACTIVATED, 
+test.compare_results_ff_matrix_rows_sin : DEACTIVATED, 
+test.compare_results_function_definition_line: (1 checks) ... OK (0 seconds)
+test.compare_results_function_definition_multiline: (1 checks) ... OK (0 seconds)
+test.compare_results_integers: (2 checks) ... OK (0 seconds)
+test.compare_results_list: (1 checks) ... OK (0 seconds)
+test.compare_results_logic_list: (2 checks) ... OK (0 seconds)
+test.compare_results_matrix_columns: (1 checks) ... OK (0 seconds)
+test.compare_results_matrix_columns_sin: (1 checks) ... OK (0 seconds)
+test.compare_results_matrix_rows: (1 checks) ... OK (0 seconds)
+test.compare_results_matrix_rows_sin: (1 checks) ... OK (0 seconds)
+test.compare_results_simple_list: (2 checks) ... OK (0 seconds)
+test.error_message_for_ffobject: (2 checks) ... OK (0 seconds)
+--------------------------- 
+Test file: ../unitTests/pboot/runnit_boot_example.R 
+test.bootExample1: (1 checks) ... OK (0.1 seconds)
+test.bootTrim: (1 checks) ... OK (0.18 seconds)
+test.grav1: (1 checks) ... OK (1.64 seconds)
+--------------------------- 
+Test file: ../unitTests/pboot/runnit_dotdotdot.R 
+test.ddd: (5 checks) ... OK (0.12 seconds)
+test.ddddataframe: (1 checks) ... OK (0.02 seconds)
+test.dotdotdot: (1 checks) ... OK (0.02 seconds)
+test.nuke: (1 checks) ... OK (10.87 seconds)
+--------------------------- 
+Test file: ../unitTests/pboot/runnit_m.R 
+test.mn: (1 checks) ... OK (0.21 seconds)
+--------------------------- 
+Test file: ../unitTests/pboot/runnit_scene3.R 
+test.stypefm3: (4 checks) ... OK (1.14 seconds)
+--------------------------- 
+Test file: ../unitTests/pboot/runnit_simple.R 
+test.simple: (3 checks) ... OK (0.74 seconds)
+--------------------------- 
+Test file: ../unitTests/pboot/runnit_standard_datacol.R 
+test.standard: (1 checks) ... OK (0.01 seconds)
+test.standard_df: (1 checks) ... OK (0.02 seconds)
+test.standard_label: (1 checks) ... OK (0.03 seconds)
+test.standard_sample: (1 checks) ... OK (0.02 seconds)
+--------------------------- 
+Test file: ../unitTests/pboot/runnit_standard_tn.R 
+test.tn: (1 checks) ... OK (0.31 seconds)
+--------------------------- 
+Test file: ../unitTests/pboot/runnit_standard.R 
+test.standard: (1 checks) ... OK (0.1 seconds)
+--------------------------- 
+Test file: ../unitTests/pboot/runnit_weight.R 
+test.stypew: (1 checks) ... OK (0.32 seconds)
+test.stypewm: (4 checks) ... OK (0.27 seconds)
+--------------------------- 
+Test file: ../unitTests/pcor/pcor_example.R 
+test.correct_row_names_2_matrices: (3 checks) ... OK (0.02 seconds)
+--------------------------- 
+Test file: ../unitTests/pcor/runit_correct_args.R 
+test.correct_args: (10 checks) ... OK (0.17 seconds)
+--------------------------- 
+Test file: ../unitTests/pcor/runit_dimnames.R 
+test.correct_row_names: (4 checks) ... OK (8.64 seconds)
+test.correct_row_names_2_matrices: (3 checks) ... OK (0.01 seconds)
+--------------------------- 
+Test file: ../unitTests/pmaxT/runit_correct_args.R 
+test.correct_args: (576 checks) ... OK (17.48 seconds)
+--------------------------- 
+Test file: ../unitTests/pmaxT/runit_small_test.R 
+test.small_test: (3 checks) ... OK (3.28 seconds)
+--------------------------- 
+Test file: ../unitTests/pmaxT/runit_test_B.R 
+test.check_B_comp: (92 checks) ... OK (0.07 seconds)
+--------------------------- 
+Test file: ../unitTests/pmaxT/runit_wrong_args.R 
+test.wrong_args: (22 checks) ... OK (0.07 seconds)
+--------------------------- 
+Test file: ../unitTests/ppam/runit_correct_args_ff.R 
+test.ff.matrix: (5 checks) ... OK (2.39 seconds)
+--------------------------- 
+Test file: ../unitTests/ppam/runit_correct_args.R 
+test.distance.matrix: (25 checks) ... OK (13.28 seconds)
+test.symmetric.matrix: (25 checks) ... OK (12.74 seconds)
+--------------------------- 
+Test file: ../unitTests/ppam/runit_dimnames.R 
+test.correct_ff_mediod_names: (1 checks) ... OK (0.02 seconds)
+test.distance_correct_mediod_names: (2 checks) ... OK (0 seconds)
+test.symmetric_correct_mediod_names: (2 checks) ... OK (0 seconds)
+--------------------------- 
+Test file: ../unitTests/ppam/runit_exercise1.R 
+test.pcor_and_ppam: (2 checks) ... OK (71.36 seconds)
+--------------------------- 
+Test file: ../unitTests/pstringdistmatrix/runit_simple.R 
+test.AllInputs: (1 checks) ... OK (0.01 seconds)
+test.differentInputs: (2 checks) ... OK (0 seconds)
+test.ErrorIfNCores: (2 checks) ... OK (0 seconds)
+test.maxDistError: (2 checks) ... OK (0 seconds)
+test.stringDistAllArgs: (1 checks) ... OK (0.02 seconds)
+test.stringDistDataArgOnly: (1 checks) ... OK (0.01 seconds)
+test.stringDistPhageWithNames: (1 checks) ... OK (0.03 seconds)
+test.stringDistPhi: (1 checks) ... OK (0.06 seconds)
+test.wrongMethodArg: (2 checks) ... OK (0 seconds)
+--------------------------- 
+Test file: ../unitTests/ptest/runit_ptest.R 
+test.mpiIsWorkingOnSeveralProcesses: (1 checks) ... OK (0.01 seconds)
+[1] "*** End of tests ***"

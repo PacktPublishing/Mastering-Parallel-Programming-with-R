@@ -1,0 +1,5 @@
+Requires "RUnit" package. In order to run a test suite run relevant function_test_suite.R script via mpiexec.
+
+Executes set of unit tests per function results of test case execution and summary report at the end of the run.
+
+

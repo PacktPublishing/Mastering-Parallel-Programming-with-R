@@ -1,0 +1,36 @@
+# Namespace file for sprint 
+
+useDynLib(sprint)
+
+export(phello)
+export(ptest)
+#export(psvm)
+export(pcor)
+export(pmaxT)
+export(pterminate)
+export(ppam)
+export(papply)
+export(prandomForest)
+export(pcombine)
+export(pboot)
+export(pRP)
+export(pRPadvance)
+export(pRS)
+export(pRSadvance)
+export(pstringdistmatrix)
+
+## generics
+S3method(print, pam)
+S3method(print, summary.pam)
+S3method(summary, pam)
+S3method(prandomForest, formula)
+S3method(prandomForest, default)
+
+export(init.rng)
+export(reset.rng)
+export(.Last.lib)
+
+import(ff)
+import(randomForest)
+import(rlecuyer)
+import(e1071)

@@ -1,0 +1,27 @@
+citHeader("To cite SPRINT in publications use:")
+
+citEntry(entry="Article",
+         title = "SPRINT: A new parallel framework for R",
+         author = personList(
+		   person("Jon", "Hill"),
+	       person("Matthew", "Hambley"),
+	       person("Thorsten", "Forster"),
+	       person("Muriel", "Mewissen"),
+	       person("Terence", "Sloan"),
+	       person("Florian", "Scharinger"),
+	       person("Arthur", "Trew"),
+	       person("Peter", "Ghazal")),
+	 	 journal = "BMC Bioinformatics",
+         year         = "2008",
+         volume       = "9",
+         number       = "1",
+         pages        = "558",
+         url          = "http://www.r-sprint.org/",
+         
+       textVersion =
+        paste("J. Hill et al. ",
+              "SPRINT: A new parallel framework for R. ",
+              "BMC Bioinformatics 9(1):558 (2008). ",
+              sep=""))
+
+citFooter("Please email us at sprint@ed.ac.uk to let us know you've cited SPRINT.")

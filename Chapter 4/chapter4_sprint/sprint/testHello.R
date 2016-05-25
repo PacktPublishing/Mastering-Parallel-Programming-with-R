@@ -1,0 +1,3 @@
+library(sprint)
+phello()
+pterminate()
