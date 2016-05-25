@@ -6,11 +6,11 @@ You can read more at [Mastering Parallel Programming with R]
 
 # Instructions
 #
-## Copyright 2016 Simon Chapple
-##
-##Packt: "Mastering Parallelism with R"
-##Chapter 1 - Aristotle's Number Puzzle
-##
+ Copyright 2016 Simon Chapple
+
+Packt: "Mastering Parallelism with R"
+Chapter 1 - Aristotle's Number Puzzle
+
 
 segueSC replacement for segue
 =============================
