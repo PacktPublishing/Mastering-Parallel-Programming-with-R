@@ -1,8 +1,7 @@
 
  # Mastering-Parallel-Programming-with-R
 
-You can read more at [Mastering Parallel Programming with R]
-(https://www.packtpub.com/big-data-and-business-intelligence/mastering-parallel-programming-r?utm_source=Github&utm_medium=Repository&utm_campaign=9781784394004)
+You can read more at [Mastering Parallel Programming with R](https://www.packtpub.com/big-data-and-business-intelligence/mastering-parallel-programming-r?utm_source=Github&utm_medium=Repository&utm_campaign=9781784394004)
 
 # Instructions
 
@@ -50,16 +49,14 @@ Logging is turned on by default.
 Simon R Chapple
 22-May-2016
 
-If you wish to contact me, you can find me on LinkedIn:
-https://uk.linkedin.com/in/simonchapple
+If you wish to contact me, you can find me on LinkedIn: https://uk.linkedin.com/in/simonchapple
 
 
 
 Related R Books and Videos
 
-* [R for Data Science] 
-(https://www.packtpub.com/big-data-and-business-intelligence/r-data-science?utm_source=Github&utm_medium=Repository&utm_campaign=9781784390860)
-* [Learning R for Data Visualization  [Video]] (https://www.packtpub.com/big-data-and-business-intelligence/learning-r-data-visualization-video?utm_source=Github&utm_medium=Repository&utm_campaign=9781785882890)
-* [Machine Learning with R Cookbook] (https://www.packtpub.com/big-data-and-business-intelligence/machine-learning-r-cookbook?utm_source=Github&utm_medium=Repository&utm_campaign=9781783982042)
+* [R for Data Science](https://www.packtpub.com/big-data-and-business-intelligence/r-data-science?utm_source=Github&utm_medium=Repository&utm_campaign=9781784390860)
+* [Learning R for Data Visualization  [Video]](https://www.packtpub.com/big-data-and-business-intelligence/learning-r-data-visualization-video?utm_source=Github&utm_medium=Repository&utm_campaign=9781785882890)
+* [Machine Learning with R Cookbook](https://www.packtpub.com/big-data-and-business-intelligence/machine-learning-r-cookbook?utm_source=Github&utm_medium=Repository&utm_campaign=9781783982042)
 
 
